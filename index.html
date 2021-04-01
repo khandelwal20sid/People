@@ -1,0 +1,544 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>People</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+   <div class="body">
+        
+        <!-- sidebar -->
+        <div class="sidebar bg-white" id="sidebar">
+            <div class="row">
+                <div class="col-12">
+                    <div id="close-side-btn">
+                        <button href="" onclick="closeSidebar()"><i class="fa fa-times text-primary" aria-hidden="true"></i></button></div>
+                </div>
+            </div>
+            
+            <div class="py-3 text-center" style="position: relative;">
+                <img class="shadow sidebar-icon-img" src="assests\icons8-change-24.png" alt="">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+    
+            <div class="px-4">
+                <div class="py-4 text-center">
+                    <button type="button" class="btn btn-primary btn-sm px-4 shadow" style="border-radius: 8px;">Request for</button>
+                </div>
+        
+                <div class="py-3 sidebar-links">                           
+                    <ul style="padding: 7px;">
+                        <li><a href="#"><img src="assests/dashboard64.png" alt="" class="side-img">Dashboard</a></li>
+                        <li><a href="#" class="text-info font-weight-bold"><img src="assests/group.png" alt="" class="side-img">People</a></li>
+                        <li><a href="#"><img src="assests/payment.png" alt="" class="side-img">Finance</a></li>
+                        <li><a href="#"><img src="assests/report.png" alt="" class="side-img">Statistics</a></li>
+                        <li><a href="#"><img src="assests/portable-document-format.png" alt="" class="side-img">Documents</a></li>
+                        <li><a href="#"><img src="assests/calendar.png" alt="" class="side-img">Calendar</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-bottom position-absolute" style="bottom: 0;">
+                    <div class="px-4 text-center pt-2"> 
+                        <div class="d-inline-flex justify-content-around align-items-center">
+                            <p><i class="fa fa-life-ring" aria-hidden="true"></i></p>            
+                            <p><a class="nav-link mr-3 text-dark" href="#">Support</a> </p>
+                        </div>
+                    </div>
+            
+                    <div class="text-center side-power-btn">
+                        <p><img src="assests/start-button.png" alt="" class="shadow-sm"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- main-area -->       
+        <div class="main-area" id="main">
+            <div style="position:relative;">
+
+                <!-- navbar -->
+                <div class="row nav align-content-center border-bottom d-flex justify-content-around">
+                    <div class="col-8 py-2">
+                        <div class="d-flex align-content-center">                        
+                            <div class="pb-1 px-2">
+                                <button id="open-side-btn" href="" onclick="openSidebar()"><i class="fa fa-bars" style="color:#e2499f;" aria-hidden="true" ></i></button>
+                            </div>                                                                
+                            <div class="pl-2 form-box">
+                                <input type="text">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                            
+                        </div>            
+                    </div>
+                    <div class="col-4 py-2 d-flex justify-content-between">
+                        <div class="d-flex mt-1">
+                            <div class="hide nav-text"><p class="text-muted"><small>29 Aug 2019</small></p></div>
+                            <div class="hide"><img src="assests\icons8-notification-48.png" alt="" style="width: 20px; height: 20px;"></div>
+                        </div>
+                                                    
+                        
+                        <div class="d-flex align-items-center">  
+                            <div class="mt-1 px-2 hide nav-text"><p><small><strong>Charles Merl</strong></small></p></div>             
+                            <img src="assests\Ellipse 2.png" alt="">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: inherit;">                                
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">bla</a>
+                                <a class="dropdown-item" href="#">bla</a>
+                                <a class="dropdown-item" href="#">bla</a>
+                            </div>
+                        </div>                                        
+                    </div>
+                </div>       
+                                     
+                    
+                <!-- main-content -->
+                <div class="row px-2 main-content">
+
+                    <!-- central part -->
+                    <div class=" col-12 col-lg-9">
+                        <!-- central-head -->
+                        <div class="row px-3 py-2">
+                            <div class="col-12 border-bottom">                                                                
+                                <h4>People</h4>                                                                   
+                                
+                                <div  class="d-flex py-2 justify-content-between align-items-center">
+                                    <div>
+                                        <small class="mr-3" id="all" onclick="showPeopleCards()" style="cursor: pointer;">All</small>
+                                        <small id="org" onclick="hidePeopleCards()" style="cursor: pointer; color: gray;">Organisation</small>
+                                    </div> 
+                                    <div class="pl-2 form-box-1">
+                                        <input type="text" placeholder="Search by name">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>                                  
+                                </div>
+
+                            </div>
+                        </div>    
+                        
+                        <!-- central-filter -->
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between align-items-center">
+                                <div class="d-flex filter-btns">
+                                    <div class="py-1">
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-light filter-btn mx-1 bg-white border-0 shadow-sm d-flex" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: inherit;">
+                                                <div class="text-muted">Design Team</div>
+                                                <div class="ml-2 text-muted">
+                                                    <small><i class="fa fa-angle-up d-block" aria-hidden="true"></i></small>
+                                                    <small><i class="fa fa-angle-down d-block" aria-hidden="true"></i></small>                                               
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">bla</a>
+                                                <a class="dropdown-item" href="#">bla</a>
+                                                <a class="dropdown-item" href="#">bla</a>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    
+                                    <div class="py-1">
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-light filter-btn mx-1 bg-white border-0 shadow-sm d-flex" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: inherit;">
+                                                <div class="text-muted">Position</div>
+                                                <div class="ml-2 text-muted">
+                                                    <small><i class="fa fa-angle-up d-block" aria-hidden="true"></i></small>
+                                                    <small><i class="fa fa-angle-down d-block" aria-hidden="true"></i></small>                                               
+                                                </div>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">bla</a>
+                                                <a class="dropdown-item" href="#">bla</a>
+                                                <a class="dropdown-item" href="#">bla</a>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    
+                                    <div class="py-1">
+                                        <button type="button" class="btn-sm btn-light filter-btn py-1 mx-1 bg-white border-0 shadow-sm">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="text-muted">More</div>
+                                                <div class="ml-5 text-muted">
+                                                    <small><i class="fa fa-plus" aria-hidden="true"></i></small>                                                                          
+                                                </div>
+                                            </div>                                                                    
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="ml-5 d-flex">
+                                    <div class="text-muted px-2"><small>Sort by:</small></div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: inherit;">
+                                          All
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">bla</a>
+                                            <a class="dropdown-item" href="#">bla</a>
+                                            <a class="dropdown-item" href="#">bla</a>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cards -->
+                        <div class="row py-2 px-3" id="people-cards">
+
+                            <div class="col-12 col-md-6 col-lg-4 my-2 px-2">
+                                <div class="card text-center people-card">
+                                  <img
+                                    class="card-img-top rounded-circle mx-auto mt-4 w-25"
+                                    src="assests\Rectangle -1.png"
+                                    alt="Free image"
+                                  />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Henry Paulista</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">henry.p@mail.com</h6>
+                                    <div class="d-flex justify-content-between py-3 px-4 px-sm-5 align-items-center">
+                                        <img src="assests\icons8-clock-16.png" alt="">
+                                        <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div> 
+                                        <div style="font-size: 12px;">100%</div>                                       
+                                    </div>                                                                       
+                                    <div class="px-0 bg-white border-top">
+                                        <p class="text-muted"><small>SENIOR CREATIVE DIRECTOR</small></p>                                        
+                                    </div>                                                             
+                                  </div>
+                                </div>        
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4 my-2 px-2">
+                                <div class="card people-card text-center h-100">
+                                  <img
+                                    class="card-img-top rounded-circle mx-auto mt-4 w-25"
+                                    src="assests\Rectangle 25.png"
+                                    alt="Free image"
+                                  />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Evan Jefferson</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">jefferson@gmail.com</h6>
+                                    <div class="d-flex justify-content-between py-3 px-4 px-sm-5 align-items-center">
+                                        <img src="assests\icons8-clock-16.png" alt="">
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div> 
+                                        <div style="font-size: 12px;">82%</div>                                       
+                                    </div>
+                                    <div class="px-0 bg-white border-top">
+                                        <p class="text-muted"><small>CREATIVE DIRECTOR</small></p>                                        
+                                    </div>                                                             
+                                  </div>
+                                </div>        
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4 my-2 px-2">
+                                <div class="card people-card text-center h-100">
+                                  <img
+                                    class="card-img-top rounded-circle mx-auto mt-4 w-25"
+                                    src="assests\Rectangle -3.png"
+                                    alt="Free image"
+                                  />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Alice McKenzie</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">alice.mc@gmail.com</h6>
+                                    <div class="d-flex justify-content-between py-3 px-sm-5 px-4 align-items-center">
+                                        <img src="assests\icons8-clock-16.png" alt="">
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div> 
+                                        <div style="font-size: 12px;">66%</div>                                       
+                                    </div>
+                                    <div class="px-0 bg-white border-top">
+                                        <p class="text-muted"><small>SENIOR COPYWRITER</small></p>                                        
+                                    </div>                                                             
+                                  </div>
+                                </div>        
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4 my-2 px-2">
+                                <div class="card people-card text-center h-100">
+                                  <img
+                                    class="card-img-top rounded-circle mx-auto mt-4 w-25"
+                                    src="assests\Rectangle -6.png"
+                                    alt="Free image"
+                                  />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Jackie Ro</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">--</h6>
+                                    <div class="d-flex justify-content-between py-3 px-sm-5 px-4 align-items-center">
+                                        <img src="assests\icons8-clock-16.png" alt="">
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div> 
+                                        <div style="font-size: 12px;">33%</div>                                       
+                                    </div>
+                                    <div class="px-0 bg-white border-top">
+                                        <p class="text-muted"><small>ART DIRECTOR</small></p>                                        
+                                    </div>                                                             
+                                  </div>
+                                </div>        
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4 my-2 px-2">
+                                <div class="card people-card text-center h-100">
+                                  <img
+                                    class="card-img-top rounded-circle mx-auto mt-4 w-25"
+                                    src="assests\Rectangle 22.png"
+                                    alt="Free image"
+                                  />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Mark Thomson</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">mark.t@gmail.com</h6>
+                                    <div class="d-flex justify-content-between py-3 px-sm-5 px-4 align-items-center">
+                                        <img src="assests\icons8-clock-16.png" alt="">
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                         <div class="progress people-progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div> 
+                                        <div style="font-size: 12px;">100%</div>                                       
+                                    </div>
+                                    <div class="px-0 bg-white border-top">
+                                        <p class="text-muted"><small>SENIOR UI DESIGNER</small></p>                                        
+                                    </div>                                                             
+                                  </div>
+                                </div>        
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4 my-2 px-2">
+                                <div class="card people-card text-center h-100">
+                                  <img
+                                    class="card-img-top rounded-circle mx-auto mt-4 w-25"
+                                    src="assests\Rectangle -2.png"
+                                    alt="Free image"
+                                  />
+                                    <div class="card-body">
+                                        <h5 class="card-title">Anastasia Groetze</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">anastasia.g@gmail.com</h6>
+                                        <div class="d-flex justify-content-between py-3 px-sm-5 px-4 align-items-center">
+                                            <img src="assests\icons8-clock-16.png" alt="">
+                                             <div class="progress people-progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                             <div class="progress people-progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                             <div class="progress people-progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div> 
+                                            <div style="font-size: 12px;">48%</div>                                       
+                                        </div>
+                                        <div class="px-0 bg-white border-top">
+                                            <p class="text-muted"><small>SENIOR UX DESIGNER</small></p>                                        
+                                        </div>                                                             
+                                  </div>
+                                </div>        
+                            </div>
+                        </div>
+
+                        <!-- Organisation -->
+                        <div class="row py-4 px-3" id="organisation">
+                            <h4 class="text-muted px-3 py-2">Loading...</h4>
+                        </div>
+
+                    </div>
+
+                    <!-- rightbar -->                    
+                    <div class=" col-12 col-lg-3 bg-white" style="height:100%">
+                        <!-- head -->
+                        <div class="row px-3 py-3 my-1 border-bottom">
+                            <div class="col-12">
+                                <small class="text-muted">SELECTED</small>
+                                <h4>Design Team</h4>
+                            </div>
+                        </div>
+
+                        <!-- settings-btn -->
+                        <div class="row">
+                            <div class="col-12">
+                                <i class="fa fa-cog text-muted" aria-hidden="true" style="float: right;"></i>
+                            </div>
+                        </div>
+
+                        <!-- rounded progress -->
+                        <div class="row align-items-center d-flex justify-content-around">
+                            <div class="col-1">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-7">
+                                <div id="circleProgress5" class="progressbar-js-circle rounded p-3"><svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#eee" stroke-width="4" fill-opacity="0"></path>
+                                    <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="rgb(98,194,205)" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 99.5396;"></path>
+                                </svg>
+                                <div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(0, 0, 0); font-size: 1rem;">
+                                    <div class="text-center pro-text">
+                                        <p class="text-muted"><small>TIME LOG</small></p>
+                                        <h6><strong>74%</strong></h6>
+                                    </div>                                
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <!-- projects -->
+                        <div class="row px-3 pt-2 my-1">
+                            <div class="col-12">
+                                <h4>Projects</h4>
+                            </div>                            
+                        </div>
+
+                        <div class="row py-1 px-2 d-flex justify-content-around">
+                            <div class="col-5 project-col">
+                                <div class="card project-cards py-3 px-2 pl-2 border-0 bg-light">
+                                    <h6 class="project-card-heading text-muted">TOTAL</h6>
+                                    <div class="align-items-center d-flex" >
+                                        <div id="card-border-1"></div>
+                                        <h4 class="px-2">148</h4>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+                            <div class="col-5 project-col">
+                                <div class="card project-cards border-0 px-2 py-3 pl-2 bg-light">
+                                    <h6 class="project-card-heading text-muted">COMPLETED</h6>
+                                    <div class="align-items-center d-flex">
+                                        <div id="card-border-2"></div>
+                                        <h4 class="px-2">56</h4>
+                                    </div>                                    
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="row pt-1 px-2 d-flex justify-content-around">
+                            <div class="col-5 project-col">
+                                <div class="card project-cards border-0 px-2 py-3 pl-2 bg-light">
+                                    <h6 class="project-card-heading text-muted">IN PROGRESS</h6>
+                                    <div class="align-items-center d-flex">
+                                        <div id="card-border-3"></div>
+                                        <h4 class="px-2">76</h4>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+                            <div class="col-5 project-col">
+                                <div class="card project-cards border-0 px-2 py-3 pl-2 bg-light">
+                                    <h6 class="project-card-heading text-muted">WAITING</h6>
+                                    <div class="align-items-center d-flex">
+                                        <div id="card-border-4"></div>
+                                        <h4 class="px-2">16</h4>
+                                    </div>                                    
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <!-- msg box -->
+                        <div class="row mt-3 py-2 border-top">
+                            <div class="col-12">
+                                <div class="card border-0 my-4  bg-light">
+                                    <div class=" px-2 py-2 d-flex ">
+                                        <div><img src="assests\message.png" class="msg-img" alt=""></div>
+                                        <div class="px-3">
+                                            <div><h6 class="text-muted msg-text"><small>DECLARATION CENTER</small></h6></div>                                            
+                                            <div>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-sm d-flex px-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: inherit;">
+                                                        <h6 style="font-size: 12px;">Internal messages</h6>
+                                                        <i class="fa fa-angle-down px-2" aria-hidden="true"></i>                                                        
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">bla</a>
+                                                        <a class="dropdown-item" href="#">bla</a>
+                                                        <a class="dropdown-item" href="#">bla</a>
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>            
+        </div>
+   </div>
+
+
+ <!-- scripts -->
+ <script>
+     function openSidebar() {         
+         document.getElementById('sidebar').classList.add('toggle')        
+         console.log("open");
+     }
+
+     function closeSidebar() {   
+         document.getElementById('sidebar').classList.remove('toggle')             
+         console.log("close");
+     }
+
+     function hidePeopleCards(){
+         document.getElementById('people-cards').style.display="none";
+         document.getElementById('all').style.color="gray";
+         document.getElementById('org').style.color="black";
+         document.getElementById('organisation').style.display="block";
+     }
+
+     function showPeopleCards(){
+         document.getElementById('people-cards').style.display="flex";
+         document.getElementById('organisation').style.display="none";
+         document.getElementById('all').style.color="black";
+         document.getElementById('org').style.color="gray";
+     }
+ </script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
